@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{81E61E5C-56CD-9671-768D-8191DD315937}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp.dll</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityVersion>2017.3.1f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_3_1;UNITY_2017_3;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;NVR_SteamVR</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_3_1;UNITY_2017_3;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;NVR_SteamVR</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEditor">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WebModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticlesLegacyModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Timeline">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIAutomation">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GoogleAudioSpatializer">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>D:/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>C:/Users/vrab/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>C:/Users/vrab/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/Users/vrab/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>C:/Users/vrab/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:/Users/vrab/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>C:/Users/vrab/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StandardEvents">
+      <HintPath>C:/Users/vrab/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\CollisionSoundFramework\NVRCollisionSoundController.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\CollisionSoundFramework\NVRCollisionSoundMaterials.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\CollisionSoundFramework\NVRCollisionSoundObject.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\CollisionSoundFramework\NVRCollisionSoundProvider.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\CollisionSoundFramework\NVRCollisionSoundProviderFMOD.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\CollisionSoundFramework\NVRCollisionSoundProviderUnity.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\EnumEqualityComparer.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleButtonDropSphere.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleButtonResetScene.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleColorLever.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleColorSlider.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleDegreeResult.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleEvent.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleGrower.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleGun.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleLaserPointer.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleLetterResult.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleLeverResultRocket.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleRGBResult.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleSpawner.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleSwitchResult.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\NVRExampleTeleporter.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRAttachJoint.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRAttachPoint.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRAttachPointMapper.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRButton.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRButtonInput.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRButtons.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRButtonsComparer.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRCanvasInput.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRHand.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRHead.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRHelpers.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRInputDevice.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRIntegration.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRInteractable.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRInteractableItem.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRInteractableItemAutoAttach.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRInteractableItemClippable.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRInteractableRotator.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRInteractables.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRLetterSpinner.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRLever.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRPhysicalController.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRPlayer.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRSDKIntegrations.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRSlider.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRSwitch.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRTeleportController.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRTeleporter.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRUIIgnoreRaycast.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\NVRVignette.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Oculus\NVROculusInputDevice.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\Oculus\NVROculusIntegration.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\SteamVR\NVRSteamVRInputDevice.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\SteamVR\NVRSteamVRIntegration.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\WindowsMR\NVRWindowsMRInput.cs" />
+    <Compile Include="Assets\NewtonVR-master\Assets\NewtonVR\WindowsMR\NVRWindowsMRIntegration.cs" />
+    <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
+    <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
+    <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
+    <Compile Include="Assets\SteamVR\Extras\SteamVR_TestThrow.cs" />
+    <Compile Include="Assets\SteamVR\Extras\SteamVR_TestTrackedCamera.cs" />
+    <Compile Include="Assets\SteamVR\Extras\SteamVR_TrackedController.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\BodyCollider.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\CircularDrive.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\ComplexThrowable.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\ControllerHoverHighlight.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\CustomEvents.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\DebugUI.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\DestroyOnDetachedFromHand.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\DestroyOnParticleSystemDeath.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\DestroyOnTriggerEnter.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\DistanceHaptics.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\DontDestroyOnLoad.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\EnumFlags.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\FallbackCameraController.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\Hand.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\HapticRack.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\HideOnHandFocusLost.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\IgnoreHovering.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\InputModule.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\Interactable.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\InteractableButtonEvents.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\InteractableHoverEvents.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\ItemPackage.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\ItemPackageReference.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\ItemPackageSpawner.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearAnimation.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearAnimator.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearAudioPitch.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearBlendshape.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearDisplacement.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearDrive.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\LinearMapping.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\Player.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\PlaySound.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SeeThru.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SleepOnAwake.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SoundDeparent.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SoundPlayOneshot.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SpawnAndAttachAfterControllerIsTracking.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SpawnAndAttachToHand.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\SpawnRenderModel.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\Throwable.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\UIElement.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\Unparent.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\Util.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Core\Scripts\VelocityEstimator.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Hints\Scripts\ControllerButtonHints.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\ArcheryTarget.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\Arrow.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\ArrowHand.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\ArrowheadRotation.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\Balloon.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\BalloonColliders.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\BalloonHapticBump.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\BalloonSpawner.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\ExplosionWobble.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\FireSource.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\Longbow.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Longbow\Scripts\SoundBowClick.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Samples\Scripts\ControllerHintsExample.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Samples\Scripts\InteractableExample.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\AllowTeleportWhileAttachedToHand.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\ChaperoneInfo.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\IgnoreTeleportTrace.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\Teleport.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\TeleportArc.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\TeleportArea.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\TeleportMarkerBase.cs" />
+    <Compile Include="Assets\SteamVR\InteractionSystem\Teleport\Scripts\TeleportPoint.cs" />
+    <Compile Include="Assets\SteamVR\Plugins\openvr_api.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_Camera.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_CameraFlip.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_CameraMask.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_Controller.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_ControllerManager.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_Ears.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_Events.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_ExternalCamera.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_Fade.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_Frustum.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_GameView.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_IK.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_LoadLevel.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_Menu.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_Overlay.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_PlayArea.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_Render.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_RenderModel.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_Skybox.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_SphericalProjection.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_Stats.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_TestController.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_TrackedCamera.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_TrackedObject.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
+    <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\Fonts\Roboto\LICENSE.txt" />
+    <None Include="Assets\NewtonVR-master\Assets\NewtonVR\Example\Shaders\3DText.shader" />
+    <None Include="Assets\NewtonVR-master\Assets\NewtonVR\Resources\Shaders\Vignette.shader" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{1c20179b-b32f-4c7c-99fb-67537467a510}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{33c93c2e-9768-465f-bb26-cb8497ed40bf}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{482d6881-b768-48bc-8d76-f1abb11fe881}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{49d0755b-ddc1-4c38-bece-aebabde35cb3}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{4b89f00f-e61f-4bd7-ace6-43fe42f83934}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{787ae32b-fae6-4129-b8dc-1c924cf2d55d}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{84505cb8-1ae9-44d0-bd10-6d5032efd866}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{a18a3b15-ded8-4076-9953-d934b410dbcf}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{aa6d7847-b3af-4265-ba48-3744f2cd8f5e}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{b74b0fe7-592b-4e3b-af2a-8a43f4c906ac}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{c8dd8e86-224a-4c0e-b64e-b0f8d82329b8}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{cc5a4019-cc2e-48d0-b20b-92c8658128c6}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{d7caa5d2-b5c9-4ee9-87c4-da9f213c62cc}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{df5bdea7-351b-4ee0-bbd3-53a4a8d8ac13}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{eea98ea9-437e-4bf7-86a7-3c5fbe05ed54}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{f64dfa6d-a3b5-4ee6-a196-291d30bd6a55}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Asset\{fb728899-5c06-4419-95c5-5b4f110a48ae}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{0286a459-10e0-43a6-a922-ddf1f59a0d63}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{0c650546-d536-4bac-a613-7b5ef8e12391}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{0e2f7c48-3399-45ac-9831-56372488cf1f}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{10b6ebbc-398a-40df-aa8c-c8cadea8eee4}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{1267598e-b563-46b0-8209-7886a1ceaebb}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{15e206f4-00ac-4b26-bb4a-f0d864d34210}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{16542a62-1777-476b-a13c-897f648932a0}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{17680440-587e-487a-8eb6-38ec9b2c0a9d}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{1974c540-b9d0-44d5-8620-d2d856eab37c}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{1b5a616b-a8ab-4223-a729-3ae03d1edd22}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{1cbb7781-decd-422a-a716-12d80155117e}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{1ece4cef-d58f-44b2-937c-e40829c74b55}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{202c67e5-31df-4907-9bd9-d3cfa7f49548}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{2288148c-a0c2-44f9-9751-b09f1d538c4c}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{2aab00f8-a32c-4224-b1a3-4d48a70ae79c}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{2e7f45f8-44a2-4397-8881-25130a70365b}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{2f056527-2575-4d44-ab30-87956ede2745}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{2fa8a6e4-3867-46da-b25b-71d7e3f1940e}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{3257ce03-697d-4e78-8674-1958a4431b92}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{32e2efc5-b76c-4aa6-ac05-3566cfe873f3}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{34703cda-8bb3-4874-830a-fadc7863b7d1}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{3868e5db-780b-491e-b866-db09da7e563c}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{3908f6c0-e3c3-4c7c-9d2b-8adf53e5f21a}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{3b3ca035-a200-457b-910b-ad569661ed82}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{3b4438bf-08d6-4ea7-b5db-b6b0e19994cb}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{3cff065a-9e97-47c1-b4b3-149b5ca784c6}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{3e76577e-7cb4-472b-80ae-69e0e5f0c42e}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{43e49765-fec2-48ec-8673-626f1ec14950}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{448b7488-973b-48e5-a445-b55dbb42d89f}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{480d8cde-140f-4960-b37c-bf697025307d}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{4c2b203f-5ea2-401f-8784-b71a28a1eca0}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{4ce3d882-1c42-47eb-a9ab-fa9d79467cdb}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{4dd8f19f-5e43-42b7-b1d1-326cf90cbcd0}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{5195408e-6bf2-4986-8fe9-15b33ea09291}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{5a257c29-6e01-441c-93f2-9fa6658b5f61}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{5d434d2c-a7c4-4c89-9ebd-ebe15a7dbbb9}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{5d78ce3e-cc80-4265-b6f2-deeeb41a9018}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{5ec44267-f267-4af6-8e30-ec660bcbb062}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{621af251-f27c-424e-b3bc-2fee3cfd0206}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{637d9219-0fa1-41dc-a1a0-3231f302f80a}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{67f03af8-7479-4fc2-8a58-77fd1fc2ebee}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{6ad98d52-c80a-495d-9f79-293eaf3f6ec1}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{6df22c9c-b1c5-4f18-ac9d-91ceebfdb30c}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{76cafd55-da17-4435-b8ed-a90663bded96}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{7965b3fd-956e-4970-a6e4-1c5f0a92a268}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{7b7ec4b1-3be5-454b-8f1e-31e2731976b6}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{81fc7d41-4348-48a6-9316-ef6d0a6529ad}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{86235f7a-8810-4691-b9b2-5addb2d6ed4c}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{8a74178f-18fc-40ad-a7e7-592100b9bd0a}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{8ede43f2-fe1d-4067-9cd2-289ccf022e80}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{90bbf7a2-27f8-4990-987e-b149d7c4840d}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{9225fd49-e5cb-4b6a-9ac6-a63ffc096cab}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{9360cd27-e287-40e3-8521-77b37afb2820}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{93b9cd9e-01cc-4b4f-8fd8-c590d8666ffa}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{950d060f-0186-4660-8609-377952a20cd6}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{9d471e16-e008-4fdd-9395-20b2531646dc}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{a2d82f86-844b-4bb1-a820-6141192af8db}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{a6b816c5-9f21-4c98-bf21-14d3ab1b518f}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{aabe1d48-f254-4943-a185-5aafef873259}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{aee17e33-0405-4889-ac27-bfe069f32c6a}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{af177a16-3190-4cc7-aa6e-2270b0c7646b}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{b0befe03-7f84-4dc3-a28f-72570b131bc4}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{b2387a29-bf6d-44b8-a6f0-fbe69a2f3d02}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{b3aa68c8-fb17-437d-8b0e-051642bf02bb}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{b50fdb25-4c7f-473e-a5b6-28bf81a2a842}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{b5877094-0dc9-4915-bc6d-be4c6198f99d}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{b62621fc-b82d-439c-b6a5-67a6a04223cb}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{b6faaaed-565c-4f3c-8417-efd5f0e9f592}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{b8c04cf7-0b64-47d7-a0a2-167a01ae3d09}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{bff1f062-a20d-46d1-9151-a402b7e0b046}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{c0ba032c-ca31-4750-8805-dfaf1dac9ecf}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{c215dc78-a9bf-4fad-be34-c879d8dc37a0}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{c36aedd4-ebd0-466a-85ba-d55b984c5ba9}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{c690c2a4-a22a-4990-a898-2180bcc01c58}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{c8cef260-1854-4e5a-b558-0ab1c4243a64}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{d18c0dbb-7092-47cb-b5bb-99d6085a5137}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{d3061d8d-05b9-4ad1-a6b8-9875a004665b}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{d632a20e-c1c8-4cf7-9f16-4f3121f97617}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{d7a05e64-2815-4de3-a0bb-bf6476fc7739}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{dde2bc49-2fe1-43ee-a8bc-d039e59d9518}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{e1273595-1b2f-430b-9fa2-7d36d164c9d9}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{e1c3b6c1-89ec-44f1-974f-bf87b14eca64}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{e1eb1cf0-6de9-4fd5-9b25-c1f7c1000398}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{e2830dc6-5b57-4fb3-8215-a37e009aa799}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{e7c0f102-af89-40ff-bb85-19e3cbba30ee}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{e88199c0-1dc7-47b9-afc8-7bf8dc1f4f38}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{e9933d0b-88f7-442e-9497-ec437aa008c1}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{edc91236-08b0-496c-8fd5-bbe71aed3fda}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{f1fb09fe-8a0d-45b1-b5d7-a36150cdb87a}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{f206bb05-c0b8-40b7-b856-4f51791104c0}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{f31b8293-0f9c-40fb-a392-824c7992f64d}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{fbcc90bf-0550-442f-8a01-bb0c33790c2a}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\AudioFile\{fbf2e07f-d74e-4a43-b687-0ad599d5be24}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Bank\{1e8ed2c5-9920-4eaf-bdcc-728a784de9df}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Bank\{9fe0cf61-71e3-4f3f-90ca-030520692bbd}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\BankFolder\{a725305a-38a9-41d4-a3f2-4604ff6bb396}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\EncodingSetting\{4a460340-9176-456e-b977-173a27bb01e0}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{2b353eed-8032-41cf-b5bf-ef97ec7e525e}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{32c4f332-6fc8-40e2-b6ca-93039f654b3f}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{33d85947-72c3-4987-8712-dbe35d2c9ca4}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{4b7f95a9-b623-4316-abd6-5d8adac86ac6}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{5b94c5a3-f061-490b-b0b8-5a556ac64149}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{7295654d-9c14-4309-98ee-11678df92997}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{8037f84d-baba-49fe-bcf1-9d17244d3219}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{a4ecd733-7b54-44b4-a9e9-bb3e128a41a4}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{b81181e2-c02a-440d-9054-09f451951dc7}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{ba74aaf7-d21e-4b21-be1f-5f332e57628b}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{bb12a629-7817-4d92-996e-f33e1ae97c39}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{bb8b987f-d28b-4963-b227-386985c454be}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{bcfcf83d-1983-4c83-90fa-0285ce5411ce}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{da256741-ab04-4762-9419-66c17b124068}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{f58b3266-7702-45a1-968a-50e68ede39d8}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{f7299df1-fe88-46f9-875e-3fe9ac9efe21}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Event\{fc73298a-3366-4db2-bbb4-f5a9ac3c55ed}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\EventFolder\{1caa447f-c752-407e-ac4b-50bca59b4c68}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\EventFolder\{4d6fc516-f7d9-45e2-bf5d-3adbb2c5d8ee}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Master.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Mixer.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Return\{21933ace-0955-4c26-a9a3-be43b79b75d0}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\SnapshotGroup\{d6936cd7-ce19-40e4-afd0-a510c0b37e78}.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Tags.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\Metadata\Workspace.xml" />
+    <None Include="Assets\NewtonVR-master\FMODProject\NewtonVR\ProjectSettings\ProjectVersion.txt" />
+    <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
+    <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
+    <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
+    <None Include="Assets\SteamVR\InteractionSystem\Readme_InteractionSystem.txt" />
+    <None Include="Assets\SteamVR\InteractionSystem\Teleport\Shaders\Highlight.shader" />
+    <None Include="Assets\SteamVR\Resources\SteamVR_AlphaOut.shader" />
+    <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
+    <None Include="Assets\SteamVR\Resources\SteamVR_ColorOut.shader" />
+    <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
+    <None Include="Assets\SteamVR\Resources\SteamVR_SphericalProjection.shader" />
+    <None Include="Assets\SteamVR\readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>
