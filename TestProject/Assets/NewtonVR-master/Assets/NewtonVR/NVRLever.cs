@@ -32,13 +32,16 @@ namespace NewtonVR
             }
 
             Mid = HingeJoint.transform.localRotation;
+            //Limits say how far the axel turns; axis is on which access can it turn
             Max = Mid * Quaternion.AngleAxis(HingeJoint.limits.max, HingeJoint.axis);
             Min = Mid * Quaternion.AngleAxis(HingeJoint.limits.min, HingeJoint.axis);
             UseMotor = this.HingeJoint.useMotor;
 
             if (HingeJoint.useLimits)
             {
-                AngleRange = -90;// (Mathf.Max(HingeJoint.limits.max, HingeJoint.limits.min) - Mathf.Min(HingeJoint.limits.max, HingeJoint.limits.min));
+                print("Start State");
+                AngleRange = (Mathf.Max(HingeJoint.limits.max, HingeJoint.limits.min) - Mathf.Min(HingeJoint.limits.max, HingeJoint.limits.min));
+                print(AngleRange);
             }
         }
 
@@ -80,6 +83,7 @@ namespace NewtonVR
             CanAttach = true;
         }
 
+        //AT TOUCH
         public override void BeginInteraction(NVRHand hand)
         {
             base.BeginInteraction(hand);
@@ -93,6 +97,7 @@ namespace NewtonVR
             HingeJoint.useMotor = false;
         }
 
+        //When you let go of the lever
         public override void EndInteraction(NVRHand hand)
         {
             base.EndInteraction(hand);
@@ -118,6 +123,7 @@ namespace NewtonVR
             if (CurrentValue <= 0.05)
                 return LeverPosition.Off;
             else if (CurrentValue >= 0.95)
+                print("Lever is ON ");
                 return LeverPosition.On;
 
             return LeverPosition.Mid;
