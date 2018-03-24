@@ -18,7 +18,8 @@ namespace NewtonVR
         protected HingeJoint HingeJoint;
 
         protected bool UseMotor;
-        protected Quaternion Max, Mid, Min;
+        protected Quaternion MaxX, MidX, MinX, MaxY, MinY, MidY;
+        protected float xMaxLimit, xMinLimit, yMaxLimit, yMinLimit;
         protected float AngleRange;
 
         protected override void Awake()
@@ -30,11 +31,13 @@ namespace NewtonVR
             {
                 HingeJoint = Rigidbody.gameObject.GetComponent<HingeJoint>();
             }
+            xMaxLimit = HingeJoint.limits.max;
+            xMinLimit = HingeJoint.limits.min;
+            MidX = HingeJoint.transform.localRotation;
 
-            Mid = HingeJoint.transform.localRotation;
             //Limits say how far the axel turns; axis is on which access can it turn
-            Max = Mid * Quaternion.AngleAxis(HingeJoint.limits.max, HingeJoint.axis);
-            Min = Mid * Quaternion.AngleAxis(HingeJoint.limits.min, HingeJoint.axis);
+            MaxX = MidX * Quaternion.AngleAxis(xMaxLimit, HingeJoint.axis);
+            MinX = MidX * Quaternion.AngleAxis(xMinLimit, HingeJoint.axis);
             UseMotor = this.HingeJoint.useMotor;
 
             if (HingeJoint.useLimits)
@@ -126,13 +129,13 @@ namespace NewtonVR
                 print("Lever is ON ");
                 return LeverPosition.On;
 
-            return LeverPosition.Mid;
+            return LeverPosition.MidX;
         }
 
         public enum LeverPosition
         {
             Off,
-            Mid,
+            MidX,
             On
         }
 
