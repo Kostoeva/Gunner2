@@ -8,10 +8,8 @@ namespace NewtonVR
     {
         private static string LETTERLIST = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
 
-        private float SnapDistance = 0f;
+        private float SnapDistance = 1f;
         private float RungAngleInterval;
-
-        public Transform rotation;
 
         private Vector3 LastAngularVelocity = Vector3.zero;
 
@@ -29,7 +27,6 @@ namespace NewtonVR
             if (IsAttached == false)
             {
                 float wheelAngle = this.transform.localEulerAngles.z;
- 
 
                 float rung = Mathf.RoundToInt(wheelAngle / RungAngleInterval);
 
@@ -40,23 +37,25 @@ namespace NewtonVR
 
                 if (velocity > 0.001f && velocity < 0.5f)
                 {
-                    this.Rigidbody.velocity = Vector3.zero;
-                    this.Rigidbody.angularVelocity = Vector3.zero;
+                    if (distanceToRungAbs > SnapDistance)
+                    {
+                        this.Rigidbody.angularVelocity = LastAngularVelocity;
+                    }
+                    else
+                    {
+                        this.Rigidbody.velocity = Vector3.zero;
+                        this.Rigidbody.angularVelocity = Vector3.zero;
 
-                    Vector3 newRotation = this.transform.localEulerAngles;
-                    newRotation.z = rung * RungAngleInterval;
-                    this.transform.localEulerAngles = newRotation;
+                        Vector3 newRotation = this.transform.localEulerAngles;
+                        newRotation.z = rung * RungAngleInterval;
+                        this.transform.localEulerAngles = newRotation;
 
-                    this.Rigidbody.isKinematic = true;
-                    
+                        this.Rigidbody.isKinematic = true;
+                    }
                 }
             }
 
             LastAngularVelocity = this.Rigidbody.angularVelocity;
-            print(LastAngularVelocity);
-            rotation = this.GetComponent<Transform>();
-            print("rotation");
-            print(rotation.rotation.z);
         }
 
         public override void BeginInteraction(NVRHand hand)

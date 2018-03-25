@@ -13,13 +13,12 @@ namespace NewtonVR
         public bool LeverEngaged = false;
         public float EngageWaitTime = 1f;
 
-        protected virtual float DeltaMagic { get { return 2f; } }
+        protected virtual float DeltaMagic { get { return 0f; } }
         protected Transform InitialAttachPoint;
         protected HingeJoint HingeJoint;
 
         protected bool UseMotor;
-        protected Quaternion MaxX, MidX, MinX, MaxY, MinY, MidY;
-        protected float xMaxLimit, xMinLimit, yMaxLimit, yMinLimit;
+        protected Quaternion Max, Mid, Min;
         protected float AngleRange;
 
         protected override void Awake()
@@ -31,20 +30,15 @@ namespace NewtonVR
             {
                 HingeJoint = Rigidbody.gameObject.GetComponent<HingeJoint>();
             }
-            xMaxLimit = HingeJoint.limits.max;
-            xMinLimit = HingeJoint.limits.min;
-            MidX = HingeJoint.transform.localRotation;
 
-            //Limits say how far the axel turns; axis is on which access can it turn
-            MaxX = MidX * Quaternion.AngleAxis(xMaxLimit, HingeJoint.axis);
-            MinX = MidX * Quaternion.AngleAxis(xMinLimit, HingeJoint.axis);
+            Mid = HingeJoint.transform.localRotation;
+            Max = Mid * Quaternion.AngleAxis(HingeJoint.limits.max, HingeJoint.axis);
+            Min = Mid * Quaternion.AngleAxis(HingeJoint.limits.min, HingeJoint.axis);
             UseMotor = this.HingeJoint.useMotor;
 
             if (HingeJoint.useLimits)
             {
-                print("Start State");
                 AngleRange = (Mathf.Max(HingeJoint.limits.max, HingeJoint.limits.min) - Mathf.Min(HingeJoint.limits.max, HingeJoint.limits.min));
-                print(AngleRange);
             }
         }
 
@@ -57,6 +51,9 @@ namespace NewtonVR
             LastLeverPosition = CurrentLeverPosition;
 
             CurrentValue = GetValue();
+            print("Turn Value is: ");
+            //RANGE OF MOTION: ~ 0 - 0.75
+            print(CurrentValue);
             CurrentLeverPosition = GetPosition();
 
             if (LastLeverPosition != LeverPosition.On && CurrentLeverPosition == LeverPosition.On)
@@ -73,6 +70,7 @@ namespace NewtonVR
 
             CanAttach = false;
 
+
             StartCoroutine(HoldPosition(EngageWaitTime));
         }
 
@@ -86,7 +84,6 @@ namespace NewtonVR
             CanAttach = true;
         }
 
-        //AT TOUCH
         public override void BeginInteraction(NVRHand hand)
         {
             base.BeginInteraction(hand);
@@ -94,13 +91,13 @@ namespace NewtonVR
             InitialAttachPoint = new GameObject(string.Format("[{0}] InitialAttachPoint", this.gameObject.name)).transform;
             InitialAttachPoint.position = hand.transform.position;
             InitialAttachPoint.rotation = hand.transform.rotation;
+
             InitialAttachPoint.localScale = Vector3.one * 0.25f;
             InitialAttachPoint.parent = this.transform;
-            
+
             HingeJoint.useMotor = false;
         }
 
-        //When you let go of the lever
         public override void EndInteraction(NVRHand hand)
         {
             base.EndInteraction(hand);
@@ -124,18 +121,26 @@ namespace NewtonVR
         private LeverPosition GetPosition()
         {
             if (CurrentValue <= 0.05)
+            {
+                print("lower bound");
                 return LeverPosition.Off;
+            } 
+            else if (CurrentValue >= 0.05 && CurrentValue <= 0.95)
+            {
+                print("middle position");
+                return LeverPosition.Mid;
+            }
             else if (CurrentValue >= 0.95)
-                print("Lever is ON ");
+                print("high bound");
                 return LeverPosition.On;
 
-            return LeverPosition.MidX;
+           
         }
 
         public enum LeverPosition
         {
             Off,
-            MidX,
+            Mid,
             On
         }
 

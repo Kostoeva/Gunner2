@@ -65,8 +65,8 @@ namespace NewtonVR
         [HideInInspector]
         public NVRPhysicalController PhysicalController;
 
-        protected Collider[] GhostColliders;
-        protected Renderer[] GhostRenderers;
+        private Collider[] GhostColliders;
+        private Renderer[] GhostRenderers;
 
         private NVRInputDevice InputDevice;
 
@@ -369,7 +369,6 @@ namespace NewtonVR
             else if (CurrentInteractionStyle == InterationStyle.ByScript)
             {
                 //this is handled by user customized scripts.
-               
             }
 
             if (IsInteracting == true)
@@ -710,7 +709,7 @@ namespace NewtonVR
                 CurrentlyHoveringOver.Remove(interactable);
         }
 
-        protected void SetVisibility(VisibilityLevel visibility)
+        private void SetVisibility(VisibilityLevel visibility)
         {
             if (CurrentVisibility != visibility)
             {
@@ -787,10 +786,7 @@ namespace NewtonVR
                 RenderModel = GameObject.Instantiate(CustomModel);
 
                 RenderModel.transform.parent = this.transform;
-                // there was a bug here. The sympton we have: When we modify the scale of the NVRPlayer on the scene to 6, the result is a tiny hand 6 times smaller than it should.
-                // also, the previous line had no effect on the localScale, so it must be buggy.
-                // This change works fine in my project
-                RenderModel.transform.localScale = CustomModel.transform.localScale;
+                RenderModel.transform.localScale = RenderModel.transform.localScale;
                 RenderModel.transform.localPosition = Vector3.zero;
                 RenderModel.transform.localRotation = Quaternion.identity;
             }
